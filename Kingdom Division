@@ -1,0 +1,42 @@
+Link to the Problem -https://www.hackerrank.com/challenges/kingdom-division/problem
+
+
+
+void dfs(int x)
+{
+    vis[x]=1;
+    long sf=1,usf=1;
+    for(auto y:M[x])
+    {
+        if(vis[y]) continue;
+        dfs(y);
+        usf*=dp[y][safe],usf%=h;
+        sf*=dp[y][safe]+dp[y][safe]+dp[y][unsafe],sf%=h;
+    }
+    sf-=usf,sf+=h,sf%=h;
+    dp[x][safe]=sf;
+    dp[x][unsafe]=usf;
+}
+// Complete the kingdomDivision function below.
+int kingdomDivision(int n, vector<vector<int>> roads) {
+M.clear();
+    M.resize(n);
+    dp.clear();
+    dp.resize(n,vector<long>(2));
+    vis.clear();
+    vis.resize(n);
+    for(auto x:roads)
+    {
+        x[0]--,x[1]--;
+        M[x[0]].push_back(x[1]);
+        M[x[1]].push_back(x[0]);
+    }
+    dfs(0);
+    for(auto &x:dp)
+    {
+        for(auto &y:x) cerr<<y<<' ';
+        cerr<<'\n';
+    }
+    return (2*dp[0][safe])%h;
+
+}
