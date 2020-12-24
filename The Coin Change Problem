@@ -1,0 +1,24 @@
+Link-https://www.hackerrank.com/challenges/coin-change/problem
+
+
+long getWays(int n, vector<long> c) {
+    sort(c.begin(),c.end());
+    long s=c.size();
+    long dp[n+1][s];
+    for(long i=0;i<s;i++)
+    {
+       dp[0][i]=1;
+    }
+    for(long i=1;i<n+1;i++)
+    {
+        for(long j=0;j<s;j++)
+        {
+            long x=(i-c[j]>=0)?dp[i-c[j]][j]:0;
+            long y=(j>=1)?dp[i][j-1]:0;
+
+            dp[i][j]=x+y;
+        }
+    }
+    return dp[n][s-1];
+
+}
