@@ -1,0 +1,17 @@
+Link-https://www.hackerrank.com/challenges/minimum-absolute-difference-in-an-array/problem
+
+
+int minimumAbsoluteDifference(vector<int> arr)
+{
+    int min=INT_MAX;
+    int n=arr.size();
+    sort(arr.begin(),arr.end());
+    for(int i=1;i<n;i++)
+    {
+       int diff=abs(arr[i]-arr[i-1]);
+       if(diff<min)
+         min=diff;
+    }
+return min;
+
+}
