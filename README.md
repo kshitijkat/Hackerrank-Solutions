@@ -1,4 +1,12 @@
 # Hackerrank-Solutions
 
-This will contain the solution of Hackerrank problems
+What you may learn here?
+
+This repository contains some useful codes, techniques, algorithms, data structures and problem solutions of Hackerrank problems.
+
+Language: C++
+
+List of solutions:-
+
+
 
