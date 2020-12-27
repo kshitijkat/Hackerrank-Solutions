@@ -1,12 +1,12 @@
 # Hackerrank-Solutions
 
-# What you may learn here?
+## What you may learn here?
 
 This repository contains some useful codes, techniques, algorithms, data structures and problem solutions of Hackerrank problems.
 
-# Language: C++
+##  Language: C++
 
-# List of solutions :-
+## List of solutions :-
 
 Common Child
 
