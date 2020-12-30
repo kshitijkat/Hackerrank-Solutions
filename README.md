@@ -9,21 +9,21 @@ C++
 
 ## List of solutions :-
 
-Common Child
+1-Common Child
 
-Equal Stacks
+2-Equal Stacks
 
-Kingdom Division
+3-Kingdom Division
 
-Minimum Absolute Difference in an Array
+4-Minimum Absolute Difference in an Array
 
-Sam and substrings
+5-Sam and substrings
 
-The Coin Change Problem
+6-The Coin Change Problem
 
-Tree: Level Order Traversal
+7-Tree: Level Order Traversal
 
-Tree: Postorder Traversal
+8-Tree: Postorder Traversal
 
 
 
